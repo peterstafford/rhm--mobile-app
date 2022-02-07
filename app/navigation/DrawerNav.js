@@ -18,9 +18,9 @@ import { BottomTabBar } from "@react-navigation/bottom-tabs";
 import HouseMapScreen from "../screens/HouseMapScreen";
 import StoryBox from "../screens/StoryBox";
 import SuggestionBox from "../screens/SuggestionBox";
-import Questionaire from "../screens/Questionaire";
-import QuestionaireCompleted from "../screens/QuestionaireCompleted";
-import Calendar from "../screens/Calendar";
+import SingleEventScreen from "../screens/SingleEventScreen";
+
+import Events from "../screens/Events";
 import Consent from "../screens/Consent";
 import Nds from "../screens/Nds";
 
@@ -74,13 +74,15 @@ function DrawerNav() {
                 // To hide multiple options you can add & condition
                 (routeName) => {
                   routeName !== "Consent" &&
-                    routeName !== "QuestionaireCompleted";
+                    routeName !== "QuestionaireCompleted" &&
+                    routeName !== "SingleScreen";
                 }
               ),
               routes: props.state.routes.filter(
                 (route) =>
                   route.name !== "Consent" &&
-                  route.name !== "QuestionaireCompleted"
+                  route.name !== "QuestionaireCompleted" &&
+                  route.name !== "SingleScreen"
               ),
             },
           };
@@ -146,9 +148,9 @@ function DrawerNav() {
           options={{ title: "Share Your Story" }}
         />
         <Drawer.Screen
-          name="Calendar"
-          component={OneStack(Calendar, "Calendar")}
-          options={{ title: "Calendar" }}
+          name="Events"
+          component={OneStack(Events, "Events")}
+          options={{ title: "Events" }}
         />
         <Drawer.Screen
           name="Suggestions"
@@ -172,6 +174,12 @@ function DrawerNav() {
           name="ContactUs"
           component={OneStack(ContactInfoScreen, "Contact Us")}
           options={{ title: "Contact Us" }}
+        />
+
+        <Drawer.Screen
+          name="SingleScreen"
+          component={OneStack(SingleEventScreen, "Event")}
+          options={{ title: "Event" }}
         />
       </Drawer.Navigator>
     </>

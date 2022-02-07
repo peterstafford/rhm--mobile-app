@@ -18,7 +18,6 @@ import qs from "qs";
 import { Linking } from "react-native";
 import colors from "../config/colors";
 import RadioForm from "react-native-simple-radio-button";
-import getRNDraftJSBlocks from "react-native-draftjs-render";
 import { Formik } from "formik";
 import shortValidation from "../vaidations/shortvalidations";
 import answerServices from "../../services/answerService";

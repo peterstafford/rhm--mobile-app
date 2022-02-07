@@ -118,7 +118,7 @@ function HomeScreen({ navigation }) {
           title="Share Your Story"
           screen="StoryBox"
         />
-        <MenuButton icon={calenderIcon} title="Calendar" screen="Calendar" />
+        <MenuButton icon={calenderIcon} title="Events" screen="Events" />
         <MenuButton
           icon={suggestionIcon}
           title="Suggestions"
