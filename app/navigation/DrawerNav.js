@@ -19,7 +19,7 @@ import HouseMapScreen from "../screens/HouseMapScreen";
 import StoryBox from "../screens/StoryBox";
 import SuggestionBox from "../screens/SuggestionBox";
 import SingleEventScreen from "../screens/SingleEventScreen";
-
+import Volunteer from "../screens/Volunteer";
 import Events from "../screens/Events";
 import Consent from "../screens/Consent";
 import Nds from "../screens/Nds";
@@ -151,6 +151,11 @@ function DrawerNav() {
           name="Events"
           component={OneStack(Events, "Events")}
           options={{ title: "Events" }}
+        />
+        <Drawer.Screen
+          name="Volunteer"
+          component={OneStack(Volunteer, "Volunteer")}
+          options={{ title: "Volunteer" }}
         />
         <Drawer.Screen
           name="Suggestions"

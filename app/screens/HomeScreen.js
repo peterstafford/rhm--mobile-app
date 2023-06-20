@@ -30,6 +30,8 @@ const youtubeIcon = require("../assets/youtube.png");
 const calenderIcon = require("../assets/calender.png");
 const nds = require("../assets/nds.png");
 const ques = require("../assets/questionaire.png");
+const volunteerIcon = require("../assets/volunteer.png");
+
 
 const MenuButton = (props) => {
   const navigation = useNavigation();
@@ -125,6 +127,7 @@ function HomeScreen({ navigation }) {
           screen="Suggestions"
         />
         <MenuButton icon={donateIcon} title="Donate" screen="Donate" />
+        <MenuButton icon={volunteerIcon} title="Volunteer" screen="Volunteer" />
         <MenuButton icon={faqIcon} title="FAQ" screen="FAQ" />
         <MenuButton icon={contactIcon} title="Contact Us" screen="ContactUs" />
         <View style={{ height: 80, width: "100%" }}></View>
